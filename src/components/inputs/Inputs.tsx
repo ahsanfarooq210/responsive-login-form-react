@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 import './Inputs.css'
 
-const Inputs = () => {
+interface PropTypes{
+    type:'text'|'password'|'email'|'phone',
+    id:string,
+    autoCompelete:string,
+    required:boolean,
+    labelText:string
+}
+
+const Inputs = ({type,id,autoCompelete,required,labelText}:PropTypes) => {
     const [isActive, setIsActive] = useState<boolean>(false)
   return (
     <div className="input-wrap">
       <input
-        type="text"
-        id="name"
+        type={type}
+        id={id}
         minLength={4}
         className={`input-field${isActive?" active":''}`}
-        autoComplete="email"
-        required
+        autoComplete={autoCompelete}
+        required={required}
         onFocus={()=>{
             setIsActive(true)
         }}
@@ -19,7 +27,7 @@ const Inputs = () => {
             setIsActive(false)
         }}
       />
-      <label htmlFor="name">Name</label>
+      <label htmlFor={id}>{labelText}</label>
     </div>
   );
 };

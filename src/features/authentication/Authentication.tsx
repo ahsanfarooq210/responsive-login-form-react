@@ -36,18 +36,9 @@ const Authentication = () => {
                 </a>
               </div>
               <div className="actual-form">
-                  <Inputs/>
-                <div className="input-wrap">
-                  <input
-                    type="password"
-                    id="password"
-                    minLength={4}
-                    className="input-field"
-                    autoComplete="off"
-                    required
-                  />
-                  <label htmlFor="password">Password</label>
-                </div>
+                  <Inputs type="text" autoCompelete="name" id="name" labelText="Name" required={true} />
+                  <Inputs type="password" autoCompelete="password" id="password" labelText="Password" required={true} />
+
                 <input
                   type="submit"
                   defaultValue="Sign In"
@@ -81,39 +72,9 @@ const Authentication = () => {
                 </a>
               </div>
               <div className="actual-form">
-                <div className="input-wrap">
-                  <input
-                    type="text"
-                    id="name"
-                    minLength={4}
-                    className="input-field"
-                    autoComplete="email"
-                    required
-                  />
-                  <label htmlFor="name">Name</label>
-                </div>
-                <div className="input-wrap">
-                  <input
-                    type="email"
-                    id="email"
-                    minLength={4}
-                    className="input-field"
-                    autoComplete="email"
-                    required
-                  />
-                  <label htmlFor="email">Email</label>
-                </div>
-                <div className="input-wrap">
-                  <input
-                    type="password"
-                    id="password"
-                    minLength={4}
-                    className="input-field"
-                    autoComplete="off"
-                    required
-                  />
-                  <label htmlFor="password">Password</label>
-                </div>
+              <Inputs type="text" autoCompelete="name" id="name" labelText="Name" required={true} />
+              <Inputs type="email" autoCompelete="email" id="email" labelText="Email" required={true} />
+              <Inputs type="password" autoCompelete="password" id="password" labelText="Password" required={true} />
                 <input
                   type="submit"
                   defaultValue="Sign Up"
