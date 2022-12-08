@@ -5,6 +5,7 @@ import image1 from "../../assets/img/image1.png";
 import image2 from "../../assets/img/image2.png";
 import image3 from "../../assets/img/image3.png";
 import Inputs from "../../components/inputs/Inputs";
+import Button from "../../components/button/Button";
 
 const Authentication = () => {
   const [toggleSignupMode, setToggleSignupMode] = useState<boolean>(false);
@@ -38,12 +39,7 @@ const Authentication = () => {
               <div className="actual-form">
                   <Inputs type="text" autoCompelete="name" id="name" labelText="Name" required={true} />
                   <Inputs type="password" autoCompelete="password" id="password" labelText="Password" required={true} />
-
-                <input
-                  type="submit"
-                  defaultValue="Sign In"
-                  className="sign-btn"
-                />
+                <Button type="submit" text="Sign In" />
                 <p className="text">
                   Forgotten your password or your login details?
                   <a href="#">Get Help</a> signing in
@@ -75,11 +71,7 @@ const Authentication = () => {
               <Inputs type="text" autoCompelete="name" id="name" labelText="Name" required={true} />
               <Inputs type="email" autoCompelete="email" id="email" labelText="Email" required={true} />
               <Inputs type="password" autoCompelete="password" id="password" labelText="Password" required={true} />
-                <input
-                  type="submit"
-                  defaultValue="Sign Up"
-                  className="sign-btn"
-                />
+              <Button type="submit" text="Sign In" />
                 <p className="text">
                   By signing up, I agree to the
                   <a href="#">Terms of Services</a> and
