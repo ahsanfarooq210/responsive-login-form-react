@@ -6,16 +6,24 @@ import image2 from "../../assets/img/image2.png";
 import image3 from "../../assets/img/image3.png";
 import Inputs from "../../components/inputs/Inputs";
 import Button from "../../components/button/Button";
+import Signin from '../signin/Signin';
+import SignupForm from "../signup/SignupForm";
 
 const Authentication = () => {
   const [toggleSignupMode, setToggleSignupMode] = useState<boolean>(false);
+
+  const transformSignupMode=()=>{
+    setToggleSignupMode((prevState) => {
+      return !prevState;
+    });
+  }
 
   return (
     <main className={toggleSignupMode ? "sign-up-mode" : ""}>
       <div className="box">
         <div className="inner-box">
           <div className="forms-wrap">
-            <form
+            {/* <form
               action="index.html"
               autoComplete="off"
               className="sign-in-form">
@@ -37,16 +45,29 @@ const Authentication = () => {
                 </a>
               </div>
               <div className="actual-form">
-                  <Inputs type="text" autoCompelete="name" id="name" labelText="Name" required={true} />
-                  <Inputs type="password" autoCompelete="password" id="password" labelText="Password" required={true} />
+                <Inputs
+                  type="text"
+                  autoCompelete="name"
+                  id="name"
+                  labelText="Name"
+                  required={true}
+                />
+                <Inputs
+                  type="password"
+                  autoCompelete="password"
+                  id="password"
+                  labelText="Password"
+                  required={true}
+                />
                 <Button type="submit" text="Sign In" />
                 <p className="text">
                   Forgotten your password or your login details?
                   <a href="#">Get Help</a> signing in
                 </p>
               </div>
-            </form>
-            <form
+            </form> */}
+            <Signin switchSignupMode={transformSignupMode} />
+            {/* <form
               action="index.html"
               autoComplete="off"
               className="sign-up-form">
@@ -68,17 +89,36 @@ const Authentication = () => {
                 </a>
               </div>
               <div className="actual-form">
-              <Inputs type="text" autoCompelete="name" id="name" labelText="Name" required={true} />
-              <Inputs type="email" autoCompelete="email" id="email" labelText="Email" required={true} />
-              <Inputs type="password" autoCompelete="password" id="password" labelText="Password" required={true} />
-              <Button type="submit" text="Sign In" />
+                <Inputs
+                  type="text"
+                  autoCompelete="name"
+                  id="name"
+                  labelText="Name"
+                  required={true}
+                />
+                <Inputs
+                  type="email"
+                  autoCompelete="email"
+                  id="email"
+                  labelText="Email"
+                  required={true}
+                />
+                <Inputs
+                  type="password"
+                  autoCompelete="password"
+                  id="password"
+                  labelText="Password"
+                  required={true}
+                />
+                <Button type="submit" text="Sign In" />
                 <p className="text">
                   By signing up, I agree to the
                   <a href="#">Terms of Services</a> and
                   <a href="#">Privacy Policy</a>
                 </p>
               </div>
-            </form>
+            </form> */}
+            <SignupForm switchSignupMode={transformSignupMode} />
           </div>
           <div className="carousel">
             <div className="image-wrapper">

@@ -1,0 +1,60 @@
+form.sign-up-form {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .text {
+    color: #bbb;
+    font-size: 0.7rem;
+  }
+  .text a {
+    color: #bbb;
+    transition: 0.3;
+  }
+  
+  .text a:hover {
+    color: #8371fd;
+  }
+
+  .toggle {
+    color: #151111;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .toggle:hover {
+    color: #8371fd;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 27px;
+    height: 27px;
+    margin-right: 0.3rem;
+  }
+  
+  .logo h3 {
+    font-size: 1.1rem;
+    margin-top: -9px;
+    letter-spacing: -0.5px;
+    color: #151111;
+  }
+  
+  .heading h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #151111;
+  }
+  
+  .heading h6 {
+    color: #bababa;
+    font-weight: 400;
+    font-size: 0.75;
+    display: inline;
+  }
