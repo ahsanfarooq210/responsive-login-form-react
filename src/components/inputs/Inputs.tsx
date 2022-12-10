@@ -31,7 +31,7 @@ const Inputs = ({
           setIsActive(true);
         }}
         onBlur={() => {
-          if (value.trim() != "") {
+          if (value.trim() == "") {
             setIsActive(false);
           }
         }}

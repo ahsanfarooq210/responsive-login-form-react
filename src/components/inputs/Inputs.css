@@ -21,8 +21,21 @@
     border-bottom-color: #151111;
     transition: 0.4s;
   }
+  
+  label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.95rem;
+    color: #bbb;
+    pointer-events: none;
+    transition: 0.4s;
+  }
 
   .input-field.active + label {
     font-size: 0.75rem;
     top: -4px;
   }
+
+  
