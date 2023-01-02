@@ -8,6 +8,8 @@ import Inputs from "../../components/inputs/Inputs";
 import Button from "../../components/button/Button";
 import Signin from '../signin/Signin';
 import SignupForm from "../signup/SignupForm";
+import Caresoul from "../../components/caresouls/Caresoul";
+
 
 const Authentication = () => {
   const [toggleSignupMode, setToggleSignupMode] = useState<boolean>(false);
@@ -26,7 +28,7 @@ const Authentication = () => {
             <Signin switchSignupMode={transformSignupMode} />
             <SignupForm switchSignupMode={transformSignupMode} />
           </div>
-          <div className="carousel">
+          {/* <div className="carousel">
             <div className="image-wrapper">
               <img src={image1} className="image img-1 show" alt="" />
               <img src={image2} className="image img-2" alt="" />
@@ -46,7 +48,8 @@ const Authentication = () => {
                 <span data-value={3} />
               </div>
             </div>
-          </div>
+          </div> */}
+          <Caresoul/>
         </div>
       </div>
     </main>
